@@ -1,5 +1,7 @@
 package Chapter2;
 
+import javax.lang.model.element.NestingKind;
+
 /**
  *定义变量并打印结果
  * @author：Wen
@@ -25,14 +27,20 @@ public class VarDemo {
 //        System.out.println("长宽高：" + length + "\t" + width + "\t" + height);
 //
 //        随堂练习2
-          System.out.println("某著名吃货采购清单");
-          System.out.println("-----------------------------------------");
-          System.out.println("商品名称\t\t单价\t\t数量\t\t备注");
-          System.out.println("德芙巧克力\t30.9\t10\t\t丝滑牛奶252g新旧包装随机发货装");
-          System.out.println("素食辣条\t\t9.9\t\t20\t\t无辣不欢，约就现在");
-          System.out.println("原味海苔\t\t32.2\t15\t\t网络爆款，香脆口感！");
+//        System.out.println("某著名吃货采购清单");
+//        System.out.println("-----------------------------------------");
+//        System.out.println("商品名称\t\t单价\t\t数量\t\t备注");
+//        System.out.println("德芙巧克力\t30.9\t10\t\t丝滑牛奶252g新旧包装随机发货装");
+//        System.out.println("素食辣条\t\t9.9\t\t20\t\t无辣不欢，约就现在");
+//        System.out.println("原味海苔\t\t32.2\t15\t\t网络爆款，香脆口感！");
 
-          //利用变量输出
-
+          //利用变量输出,主要熟悉使用printf
+        String goods = "德芙巧克力";
+        double price = 30.9;
+        int num = 10;
+        String str = "丝滑牛奶252g新旧包装随机发货装";
+        System.out.println("-----------------------------------------");
+        System.out.println("商品名称\t\t单价\t\t数量\t\t备注");
+        System.out.printf("%s\t%.2f\t%d\t\t%s",goods,price,num,str);
     }
 }
