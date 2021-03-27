@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @copyright 老九学堂
  * @remark TODO
  */
-public class RMBcConvert {
+public class RMBConvert {
     public static void main(String[] agrs){
         Scanner input = new Scanner(System.in);
         System.out.println("请输入double类型的金额：");
