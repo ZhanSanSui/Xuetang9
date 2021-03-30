@@ -123,8 +123,5 @@ public class DoubleFor {
 //            System.out.println();
 //        }
 
-
-
-
     }
 }
