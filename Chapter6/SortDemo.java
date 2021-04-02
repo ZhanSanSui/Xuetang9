@@ -1,7 +1,9 @@
 package Chapter6;
 
+import java.util.Arrays;
+
 /**
- * 冒泡排序算法
+ * 冒泡排序算法、选择排序算法、Array.sort()方法
  * @author：Wen
  * @version：1.0
  * @date：2021/4/1 19:11
@@ -17,9 +19,11 @@ public class SortDemo {
         final int N = 50000; //常量
         int[] nums1 = new int[N];
         int[] nums2 = new int[N];
+        int[] nums3 = new int[N];
         for (int i = 0; i < nums1.length; i++){
             nums1[i] = (int)(Math.random() * 100000);
             nums2[i] = nums1[i];
+            nums3[i] = nums1[i];
             //错误写法 num2 = num1；
         }
 
@@ -55,7 +59,6 @@ public class SortDemo {
         System.out.println("冒泡排序共耗时：" + (endTime - startTime) + "毫秒");
 
         startTime = System.currentTimeMillis();
-
         //选择排序的核心算法：每次循环，交换i的值和最小数的小标的值
         for (int i = 0; i < nums2.length; i++) {
             int min = nums2[i]; //假设第i个值是最小值
@@ -85,8 +88,19 @@ public class SortDemo {
 //         }
 
         endTime = System.currentTimeMillis();
-
-        System.out.println();
         System.out.println("选择排序排序共耗时：" + (endTime - startTime) + "毫秒");
+
+
+        startTime = System.currentTimeMillis();
+        //快速排序：使用java.util.Arrays.sort()方法进行排序
+        Arrays.sort(nums3);
+        endTime = System.currentTimeMillis();
+        System.out.println("Arrays.sort()方法排序共耗时：" + (endTime - startTime) + "毫秒");
+        //怎么逆序Arrays.sort()方法进行排序->首尾交换
+        for (int i = 0; i < nums3.length / 2; i++) {
+            int temp = nums3[i];
+            nums3[i] = nums3[nums3.length - i - 1];//结论
+            nums3[nums3.length - i - 1] = temp;
+        }
     }
 }
