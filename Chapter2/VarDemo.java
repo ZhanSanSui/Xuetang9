@@ -1,7 +1,5 @@
 package Chapter2;
 
-import javax.lang.model.element.NestingKind;
-
 /**
  *定义变量并打印结果
  * @author：Wen
