@@ -14,7 +14,8 @@ public class CalcAvgPower {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int power = 0; //玩家的战斗力
+        //玩家的战斗力
+        int power = 0;
         //输入三个战斗力，求平均值
         int sum = 0;
         double avg = 0;
