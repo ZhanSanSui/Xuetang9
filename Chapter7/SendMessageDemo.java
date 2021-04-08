@@ -13,7 +13,30 @@ import java.util.concurrent.TimeUnit;
  */
 public class SendMessageDemo {
     public static void main(String[] args) {
-        SendMessage("王二狗","世界频道", "公会狩猎（40人团），有空的++", 5 ,1);
+        //SendMessage("王二狗","世界频道", "公会狩猎（40人团），有空的++", 5 ,1);
+        SendMessage("王三狗");
+    }
+
+    /**
+     * 重载的喊话方法：只需要用户提供昵称参数即可进行默认的喊话
+     * @param nicName
+     */
+    public static void SendMessage(String nicName){
+        String[] contens = {
+            "你吃了吗？",
+            "世界是你的，世界是我的，世界最终是中国人的",
+            "欢迎来到XXX游戏世界"
+        };
+        SendMessage(nicName,"默认频道",contens[(int)(Math.random() * 2)],10,1);
+    }
+
+    /**
+     * 重载喊话的方法
+     * @param nicName 昵称
+     * @param channelName 喊话的频道名称
+     */
+    public static void SendMessage(String nicName, String channelName){
+        SendMessage(nicName,channelName,"",4,54);
     }
 
     /**
@@ -43,6 +66,5 @@ public class SendMessageDemo {
                 e.printStackTrace();
             }
         }
-
     }
 }
