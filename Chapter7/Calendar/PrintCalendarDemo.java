@@ -93,9 +93,11 @@ public class PrintCalendarDemo {
         }
         int sum = 0;
         for(int i = 1900; i < year; i++){
-            sum += 365;		//每一年累加365天
+            //每一年累加365天
+            sum += 365;
             if(isLeapYear(i)){
-                sum++;		//闰年多+1天
+                //闰年多+1天
+                sum++;
             }
         }
         return sum;
