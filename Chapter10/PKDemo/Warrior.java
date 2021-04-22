@@ -1,4 +1,4 @@
-package Chapter10.ModelDemo;
+package Chapter10.PKDemo;
 
 /**
  * 战士类
@@ -8,7 +8,7 @@ package Chapter10.ModelDemo;
  * @copyright 老九学堂
  * @remark TODO
  */
-public class Warrior extends Hero{
+public class Warrior extends Hero {
 
     public Warrior() {
         super();
@@ -22,17 +22,19 @@ public class Warrior extends Hero{
     }
 
     @Override
-    public boolean isFightByDistance(Hero hero) {
+    public boolean isFightByDistance(Assailable hero) {
         double distance = getDistance(getX(), getY(), hero.getX(), hero.getY());
         return distance <= 100;
     }
 
     @Override
-    public void fight(Hero hero) {
+    public void fight(Assailable hero) {
         //1.生成随机的攻击力 20-70之间的随机数
         //2.减掉传入英雄对象的hp
         int attack  = ((int)(Math.random() * 1000)) % 51 + 20;
         setAttack(attack);
         hero.setHp(hero.getHp() - attack);
+        System.out.println(getName() + "成功实施了一次近战攻击！");
     }
+
 }
